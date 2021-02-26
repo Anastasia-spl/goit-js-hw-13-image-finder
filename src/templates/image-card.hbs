@@ -1,7 +1,10 @@
 {{#each this}}
-<li>
+<li class="picture__item" data-id={{id}} data-largeimg={{largeImageURL}}>
     <div class="photo-card">
-        <img src={{webformatURL}} alt={{tags}} />
+        <a class="thumb js-thumb" href={{largeImageURL}}>
+            <img class="found-image" src={{webformatURL}} data-largeimg={{largeImageURL}} data-likes={{likes}}
+                data-views={{views}} data-comments={{comments}} data-downloads={{downloads}} data-id={{id}} />
+        </a>
 
         <div class="stats">
             <p class="stats-item">
